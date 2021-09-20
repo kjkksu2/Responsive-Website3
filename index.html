@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Scrolling</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+    <section class="sec-01">
+      <h2 class="title">Want To Leave Alone?</h2>
+      <div class="main">
+        <img src="1.jpg" />
+        <div class="info">
+          <h3>Sea</h3>
+          <p>
+            The sea, connected as the world ocean or simply the ocean, is the
+            body of salty water that covers approximately 71 percent of the
+            Earth's surface. The word sea is also used to denote second-order
+            sections of the sea, such as the Mediterranean Sea, as well as
+            certain large, entirely landlocked, saltwater lakes, such as the
+            Caspian Sea.
+          </p>
+        </div>
+      </div>
+      <div class="media-Icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </section>
+    <section class="sec-02">
+      <h2 class="title">Want To Improve Your Life?</h2>
+      <div class="content">
+        <img src="2.jpg" />
+        <div class="info">
+          <h3>Study</h3>
+          <p>
+            “No matter how busy you may think you are, you must find time for
+            reading, or surrender yourself to self-chosen ignorance.”
+          </p>
+          <span>- Atwood H. Townsend -</span>
+        </div>
+      </div>
+    </section>
+    <section class="sec-03">
+      <h2 class="title">Want To Make Your Friend?</h2>
+      <div class="content">
+        <img src="3.jpg" />
+        <div class="media-Icons">
+          <a href="#"><i class="fab fa-facebook"> Facebook</i></a>
+          <a href="#"><i class="fab fa-twitter"> Twitter</i></a>
+          <a href="#"><i class="fab fa-instagram"> Instagram</i></a>
+          <a href="#"><i class="fab fa-youtube"> Youtube</i></a>
+          <a href="#"><i class="fab fa-linkedin"> Linkedin</i></a>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    ScrollReveal({
+      distance: "60px",
+      easing: "ease",
+      duration: "2000",
+    });
+
+    ScrollReveal().reveal(".title");
+    ScrollReveal().reveal(".main img, .sec-02 img", {
+      delay: 300,
+      origin: "left",
+    });
+    ScrollReveal().reveal(".main .info, .sec-03 img", {
+      delay: 400,
+      origin: "right",
+    });
+    ScrollReveal().reveal(".sec-01 .media-Icons a, .sec-02 .info", {
+      delay: 500,
+      origin: "bottom",
+      interval: 200,
+    });
+    ScrollReveal().reveal(".sec-03 .media-Icons a", {
+      delay: 500,
+      origin: "left",
+      interval: 200,
+    });
+  </script>
+</html>
